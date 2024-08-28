@@ -1,0 +1,174 @@
+Baixar python e npm
+sudo apt get install ---
+
+HABILITAR AMBIENTE VIRTUAL EM PYTHON:
+
+#Cria
+python3 -m venv .venv
+#Habilita
+source .venv/bin/activate
+
+Dentro do python, baixar todas as dependencias das bibliotecas importadas no codigo:
+
+pip install python3-dependencia
+OR
+pip install dependencia
+
+Criar a executavel no AMBIENTE
+pyinstaller --onefile --windowed --key="minha_chave" --icon=icone.ico --add-data "image1.png:." --add-data "image2.png:." app.py
+
+Projeto: Gerenciador de Pesagens de Temperos
+
+Descrição do Projeto:
+Este projeto é um aplicativo de gerenciamento de pesagens de temperos desenvolvido em Python. O objetivo principal é facilitar o controle das pesagens diárias de diferentes tipos de temperos por funcionários, registrar esses dados e fornecer um sistema de ranking mensal baseado na quantidade total de temperos pesados, ajustado pela dificuldade de cada tempero. O aplicativo também oferece funcionalidades como a exportação de dados para Excel e uma interface amigável para gerenciar funcionários e tipos de temperos.
+
+Modelos Usados:
+
+Tkinter:
+
+Interface Gráfica (GUI): Utilizado para criar a interface gráfica do usuário, incluindo formulários, botões, e tabelas.
+Widgets: Combobox para seleção de funcionários e temperos, Entries para entrada de dados, Buttons para ações como registrar, pesquisar e exportar.
+Pandas:
+
+Manipulação de Dados: Utilizado para manipulação e análise de dados. Criação de DataFrames para armazenar e processar dados das pesagens.
+Exportação para Excel: Utilizado para exportar os dados registrados para um arquivo Excel.
+SQLite3:
+
+Banco de Dados: Utilizado para armazenar de forma persistente os dados de funcionários, temperos e pesagens.
+Consultas SQL: Execução de consultas SQL para inserir, atualizar e recuperar dados do banco de dados.
+PIL (Python Imaging Library):
+
+Manipulação de Imagens: Utilizado para carregar e exibir imagens, como a imagem de fundo e a imagem do Splashscreen.
+Datetime:
+
+Manipulação de Datas: Utilizado para manipular e formatar datas, garantindo que os registros de pesagens sejam feitos com a data e hora corretas.
+
+Instruções de Uso do Programa "Gerenciador de Pesagens de Temperos"
+Este programa foi desenvolvido para gerenciar e controlar as pesagens de diferentes tipos de temperos por funcionários. Ele permite cadastrar funcionários e temperos, registrar pesagens diárias, gerar rankings mensais, e exportar os dados para um arquivo Excel. Abaixo, você encontrará uma descrição detalhada de como usar o programa e o propósito de cada botão.
+
+1. Tela Inicial e Navegação:
+Ao iniciar o programa, você verá a interface principal dividida em várias seções:
+
+Área de Cadastro de Funcionários: Localizada no topo esquerdo.
+Área de Cadastro de Temperos: Localizada ao lado direito da área de funcionários.
+Área de Registro de Pesagens: Centralizada no meio da tela.
+Área de Botões Especiais: Localizada na parte inferior.
+2. Funções e Botões:
+Área de Cadastro de Funcionários:
+Nome do Funcionário: Campo onde você deve inserir o nome do funcionário que deseja cadastrar.
+Botão "Cadastrar Funcionário": Ao clicar neste botão, o funcionário cujo nome foi inserido será cadastrado no sistema. Obs: Você precisará autenticar como administrador para cadastrar um funcionário.
+Botão "Remover Funcionário": Este botão remove um funcionário do sistema. Obs: Será solicitada uma autenticação de administrador antes de remover um funcionário.
+Área de Cadastro de Temperos:
+Nome do Tempero: Campo onde você deve inserir o nome do tempero que deseja cadastrar.
+Dificuldade: Campo onde você deve inserir o nível de dificuldade associado ao tempero (por exemplo, 1.5, 2.0).
+Botão "Cadastrar Tempero": Ao clicar neste botão, o tempero com a dificuldade especificada será cadastrado no sistema. Obs: A autenticação de administrador será necessária.
+Botão "Remover Tempero": Este botão remove um tempero do sistema. A autenticação de administrador é obrigatória.
+Área de Registro de Pesagens:
+Funcionário: Um menu suspenso (combobox) onde você deve selecionar o funcionário que realizou a pesagem.
+Tempero: Um menu suspenso (combobox) onde você deve selecionar o tempero que foi pesado.
+Quantidade (unidades): Campo onde você deve inserir a quantidade do tempero pesado em unidades.
+Data (DD/MM/YYYY): Campo onde você deve inserir a data da pesagem (o formato deve ser DD/MM/YYYY). O campo é preenchido automaticamente com a data atual, mas pode ser ajustado manualmente.
+Botão "Registrar Pesagem": Ao clicar neste botão, a pesagem será registrada no sistema com as informações fornecidas.
+Área de Botões Especiais:
+Botão "Mostrar Ranking": Este botão gera e exibe o ranking mensal dos funcionários baseado nas pesagens registradas. O ranking considera a quantidade total pesada multiplicada pela dificuldade dos temperos.
+Botão "Resetar Banco de Dados": Este botão limpa todos os registros de pesagens do banco de dados. Obs: Este é um botão sensível que exige autenticação de administrador. Utilize-o apenas no final de um ciclo de pesagens.
+Botão "Remover Registro": Este botão permite que você remova registros de pesagens específicos. Útil para corrigir erros de entrada. Obs: A autenticação de administrador é necessária para essa ação.
+Botão "Exportar para Excel": Ao clicar neste botão, todos os registros de pesagens serão exportados para um arquivo Excel, permitindo uma análise mais aprofundada ou compartilhamento dos dados.
+3. Outras Funcionalidades:
+Barra de Progresso: Quando o programa está carregando, uma barra de progresso será exibida no rodapé do Splashscreen, indicando que o programa está iniciando.
+Autenticação de Administrador: Algumas ações, como cadastrar ou remover funcionários e temperos, resetar o banco de dados, e remover registros de pesagens, exigem autenticação de administrador para evitar alterações acidentais ou não autorizadas.
+4. Dicas de Uso:
+Manter os dados organizados: É recomendável registrar as pesagens diariamente e verificar os dados antes de finalizar o ciclo mensal.
+Exportar Dados Regularmente: Utilize a função de exportação para Excel regularmente, especialmente antes de resetar o banco de dados, para garantir que os dados sejam armazenados de forma segura e acessível para futuras análises.
+Autenticação Segura: Mantenha as credenciais de administrador seguras e compartilhe-as apenas com pessoas de confiança.
+
+1. Instalar Python:
+Antes de instalar qualquer dependência, você precisa ter o Python instalado. Você pode baixar e instalar o Python a partir do site oficial do Python.
+
+2. Instalar pip:
+O pip geralmente vem pré-instalado com o Python. Você pode verificar se o pip está instalado executando:
+
+sh
+Copiar código
+pip --version
+Se o pip não estiver instalado, você pode instalá-lo manualmente. Siga as instruções no site oficial do pip.
+
+3. Instalar virtualenv (Opcional, mas Recomendado):
+Para isolar o ambiente do seu projeto, é recomendado usar um ambiente virtual. Você pode criar um ambiente virtual com virtualenv:
+
+sh
+Copiar código
+pip install virtualenv
+Em seguida, crie e ative o ambiente virtual:
+
+sh
+Copiar código
+virtualenv venv
+# Ativar no Windows
+venv\Scripts\activate
+# Ativar no Linux/Mac
+source venv/bin/activate
+4. Instalar Dependências do Projeto:
+Aqui estão as dependências que você precisa instalar para o projeto, junto com os comandos para instalá-las.
+
+a. Tkinter (GUI):
+Instalação: O Tkinter geralmente vem pré-instalado com o Python em sistemas Windows. No Linux, você pode precisar instalá-lo manualmente.
+Ubuntu/Linux:
+sh
+Copiar código
+sudo apt-get install python3-tk
+Mac: Vem pré-instalado com o Python.
+b. Pillow (Manipulação de Imagens):
+Instalação:
+sh
+Copiar código
+pip install pillow
+c. Pandas (Manipulação de Dados):
+Instalação:
+sh
+Copiar código
+pip install pandas
+d. Matplotlib (Gráficos - se necessário):
+Instalação:
+sh
+Copiar código
+pip install matplotlib
+e. SQLite3 (Banco de Dados):
+Instalação: Vem pré-instalado com o Python.
+f. PyInstaller (Criação do Executável):
+Instalação:
+sh
+Copiar código
+pip install pyinstaller
+g. Datetime (Manipulação de Datas e Horas):
+Instalação: O módulo datetime é parte da biblioteca padrão do Python, portanto, já está disponível sem necessidade de instalação adicional.
+h. ttkbootstrap (Estilos Modernos para Tkinter, opcional):
+Instalação (se desejar adicionar estilos mais modernos ao Tkinter):
+sh
+Copiar código
+pip install ttkbootstrap
+5. Verificar Todas as Dependências:
+Para garantir que todas as dependências estejam instaladas, você pode criar um arquivo requirements.txt e listar todas as bibliotecas necessárias. Então, execute:
+
+sh
+Copiar código
+pip freeze > requirements.txt
+Em um novo ambiente, ou para garantir que todas as dependências estejam instaladas, use:
+
+sh
+Copiar código
+pip install -r requirements.txt
+Resumo das Dependências:
+plaintext
+Copiar código
+- Python (versão 3.x)
+- pip (gerenciador de pacotes Python)
+- virtualenv (para criar ambientes virtuais)
+- Tkinter (para interface gráfica)
+- Pillow (para manipulação de imagens)
+- Pandas (para manipulação de dados)
+- Matplotlib (para gráficos, opcional)
+- SQLite3 (banco de dados)
+- PyInstaller (para criação do executável)
+- Datetime (para manipulação de datas)
+- ttkbootstrap (para estilos modernos, opcional)
